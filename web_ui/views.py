@@ -33,7 +33,7 @@ class IndexView(generic.ListView):
 #         raise Http404("Question does not exist")
 #     return render(request, 'polls/detail.html', {'question': question})
 
-class DetailsView(generic.DeleteView):
+class DetailsView(generic.DetailView):
     template_name = 'polls/detail.html'
     model = Question
 
